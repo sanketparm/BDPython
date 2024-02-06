@@ -1,0 +1,10 @@
+ls
+pwd
+cd
+mkdir
+rm	 // for deleting files
+cp // for copy files
+touch // for creating files
+file // check file type
+nano, vi, and jed // for editing files
+
