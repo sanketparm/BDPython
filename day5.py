@@ -150,15 +150,78 @@
 
 # print(z[0][2],z[1][1],z[2][0])
 
-def fibonacci(n):
-    fib_series = [0, 1]
+# def fibonacci(n):
+#     fib_series = [0, 1]
 
-    while len(fib_series) < n:
-        fib_series.append(fib_series[-1] + fib_series[-2])
+#     while len(fib_series) < n:
+#         fib_series.append(fib_series[-1] + fib_series[-2])
 
-    return fib_series
+#     return fib_series
+
+# # Example: Generate the first 10 Fibonacci numbers
+# result = fibonacci(10)
+# print(result)
+#--------------------------------------------------
+#searches for prime numbers:
+
+# for n in range(2, 10):
+#     for x in range(2, n):
+#         if n % x == 0:
+#             print(n, 'equals', x, '*', n//x)
+#             break
+#     else:
+#         # loop fell through without finding a factor
+#         print(n, 'is a prime number')
+
+#---------------------------------
+# For found odd even numbers
+
+# for num in range(2, 10):
+#     if num % 2 == 0:
+#         print("Found an even number", num)
+#         continue
+#     print("Found an odd number", num)
+
+#---------------------------------------
+
+# def make_incrementor(n):
+#     return lambda x: x + n
+
+# f = make_incrementor(42)
+# f(0)
+
+# f(1)
+# # print(f)
+
+    # return fib_series
 
 # Example: Generate the first 10 Fibonacci numbers
-result = fibonacci(10)
-print(result)
+# result = fibonacci(10)
+# print(result)
+
+
+#-------------------------------------------------------
+
+#multi-line docstring:
+# def my_function():
+#     """Do nothing, but document it.
+
+#     No, really, it doesn't do anything.
+#     """
+#     pass
+
+# print(my_function.__doc__)
+
+# def f(ham: str, eggs: str = 'eggs') -> str:
+#     print("Annotations:", f.__annotations__)
+#     print("Arguments:", ham, eggs)
+#     return ham + ' and ' + eggs
+
+# f('spam')
+
+#-------------------------------
+
+
+
+
 
