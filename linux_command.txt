@@ -1,10 +1,32 @@
-ls
-pwd
-cd
-mkdir
+ls // Lists a directory’s content
+pwd // Shows the current working directory’s path
+cd // Changes the working directory
+mkdir // Creates a new directory
 rm	 // for deleting files
 cp // for copy files
 touch // for creating files
 file // check file type
 nano, vi, and jed // for editing files
+head //Displays a file’s first ten lines
+tail //Prints a file’s last ten lines
+locate // Finds files in a system’s database
+sudo	 //Runs a command as a superuser
+chmod //Modifies a file’s read, write, and execute permissions
+top //Displays running processes and the system’s resource usage
+time //Calculates commands’ execution time
+systemctl //Manages system services
+jobs // Displays a shell’s running processes with their statuses
+kill // Terminates a running process
+ping //Checks the system’s network connectivity
+wget //Downloads files from a URL
+scp //Securely copies files or directories to another system
+netstat //Shows the system’s network information, like routing and sockets
+traceroute //Tracks a packet’s hops to its destination
+history // Lists previously run commands
+man	 //Shows a command’s manual
+echo // Prints a message as a standard output
+ln	// Links files or directories
+alias and unalias // Sets and removes an alias for a file or command
+cal //Displays a calendar in Terminal
+apt-get // Manages Debian-based distros package libraries
 

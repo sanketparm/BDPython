@@ -81,6 +81,98 @@ SELECT
   imdb_rating,
   year_released
 FROM movies;
+SELECT
+  movie_title,
+  box_office
+FROM movies
+WHERE box_office > 300;
+
+SELECT
+  movie_title,
+  imdb_rating,
+  year_released
+FROM movies
+WHERE movie_title LIKE '%Godfather%';
+
+SELECT
+  movie_title,
+  imdb_rating,
+  year_released
+FROM movies
+WHERE year_released < 2001 AND imdb_rating > 9;
+
+SELECT
+  movie_title,
+  imdb_rating,
+  year_released
+FROM movies
+WHERE year_released > 1991
+ORDER BY year_released ASC;
+
+select * from movies;
+
+ALTER TABLE movies
+ADD distribution_compnyid2 VARCHAR(255);
+
+select * from movies;
+
+INSERT INTO original_table (id, value1, value2)
+SELECT id, value1 * 2, value2 * 2
+FROM original_table
+WHERE id = 1;
+
+UPDATE movies
+SET distribution_compnyid2 = distribution_company_id * 2;
+
+select * from movies;
+
+select distribution_company_id from movies;
+
+UPDATE movies
+SET distribution_compnyid2 = distribution_company_id * 2 
+where distribution_company_id is not null;
+
+ALTER TABLE movies
+RENAME COLUMN budget TO email_address;
+
+select * from movies;
+
+ALTER TABLE movies
+ADD distribution2 VARCHAR(255);
+
+
+SELECT year_released
+FROM movies
+ORDER BY year_released ASC;
+
+-- SELECT * DISTINCT distribution_company_id
+-- FROM movies;
+
+SELECT *
+FROM employees
+WHERE department_id IN (SELECT DISTINCT department_id FROM employees);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
