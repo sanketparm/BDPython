@@ -1,0 +1,324 @@
+[ec2-user@ip-172-31-13-101 ~]$ hdfs dfs -ls  /tmp/USUK30/sanket/
+Found 1 items
+-rw-r--r--   3 ec2-user hadoop          0 2024-02-13 16:07 /tmp/USUK30/sanket/file.txt
+[ec2-user@ip-172-31-13-101 ~]$ ls
+'()'   BD_USUK_30012024   data.txt
+[ec2-user@ip-172-31-13-101 ~]$ hdfs dfs -ls  /tmp/USUK30/sanket/
+Found 1 items
+-rw-r--r--   3 ec2-user hadoop          0 2024-02-13 16:07 /tmp/USUK30/sanket/file.txt
+[ec2-user@ip-172-31-13-101 ~]$ hdfs dfs -ls  /tmp/USUK30
+Found 11 items
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:41 /tmp/USUK30/Anu
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:14 /tmp/USUK30/Asad
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-12 17:02 /tmp/USUK30/Solomon
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:52 /tmp/USUK30/elaheh
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 15:53 /tmp/USUK30/hocine
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:12 /tmp/USUK30/keith
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:17 /tmp/USUK30/nazir
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-12 17:03 /tmp/USUK30/pravith
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:07 /tmp/USUK30/sanket
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:45 /tmp/USUK30/seb
+drwxr-xr-x   - ec2-user hadoop          0 2024-02-13 16:26 /tmp/USUK30/uttam
+[ec2-user@ip-172-31-13-101 ~]$ -ls
+-bash: -ls: command not found
+[ec2-user@ip-172-31-13-101 ~]$ ls
+'()'   BD_USUK_30012024   data.txt
+[ec2-user@ip-172-31-13-101 ~]$ -rm data.txt
+-bash: -rm: command not found
+[ec2-user@ip-172-31-13-101 ~]$ -rm data.txt
+-bash: -rm: command not found
+[ec2-user@ip-172-31-13-101 ~]$ rm data.txt
+[ec2-user@ip-172-31-13-101 ~]$ ls
+'()'   BD_USUK_30012024
+[ec2-user@ip-172-31-13-101 ~]$ cd BD_USUK_30012024/
+[ec2-user@ip-172-31-13-101 BD_USUK_30012024]$ ls
+Anu  Asad  elaheh  hocine  keith  nazir  pravith  sanket  seb  Solomon
+[ec2-user@ip-172-31-13-101 BD_USUK_30012024]$ cd sanket
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ cat test.txt/
+cat: test.txt/: Is a directory
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ cat test.txt
+cat: test.txt: Is a directory
+[ec2-user@ip-172-31-13-101 sanket]$ rm test.txt/
+rm: cannot remove 'test.txt/': Is a directory
+[ec2-user@ip-172-31-13-101 sanket]$ rm -f test.txt/
+rm: cannot remove 'test.txt/': Is a directory
+[ec2-user@ip-172-31-13-101 sanket]$ nano mapper.py
+[ec2-user@ip-172-31-13-101 sanket]$ nano reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+mapper.py  reducer.py  test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ nano test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+data.txt  mapper.py  reducer.py  test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ rm -r test.txt
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+data.txt  mapper.py  reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ mkdir data
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+data  data.txt  mapper.py  reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ cat data.txt | python mapper.py
+#!/usr/bin/env  1
+python  1
+import  1
+sys     1
+current_word    1
+=       1
+None    1
+current_count   1
+=       1
+0       1
+word    1
+=       1
+None    1
+#       1
+Input   1
+comes   1
+from    1
+standard        1
+input   1
+(sys.stdin)     1
+for     1
+line    1
+in      1
+sys.stdin:      1
+#       1
+Parse   1
+the     1
+input   1
+from    1
+mapper.py       1
+line    1
+=       1
+line.strip()    1
+#       1
+Split   1
+the     1
+line    1
+into    1
+word    1
+and     1
+count,  1
+separated       1
+by      1
+tab     1
+word,   1
+count   1
+=       1
+line.split('\t',        1
+1)      1
+#       1
+Convert 1
+count   1
+(currently      1
+a       1
+string) 1
+to      1
+int     1
+try:    1
+count   1
+=       1
+int(count)      1
+except  1
+ValueError:     1
+#       1
+If      1
+count   1
+was     1
+not     1
+a       1
+number, 1
+ignore/discard  1
+this    1
+line    1
+continue        1
+#       1
+This    1
+IF-switch       1
+works   1
+because 1
+Hadoop  1
+sorts   1
+the     1
+output  1
+of      1
+the     1
+mapper  1
+by      1
+key     1
+(here:  1
+word)   1
+#       1
+before  1
+it      1
+is      1
+passed  1
+to      1
+the     1
+reducer 1
+if      1
+current_word    1
+==      1
+word:   1
+current_count   1
++=      1
+count   1
+else:   1
+if      1
+current_word:   1
+#       1
+Write   1
+result  1
+to      1
+standard        1
+output  1
+print   1
+"%s\t%s"        1
+%       1
+(current_word,  1
+current_count)  1
+current_count   1
+=       1
+count   1
+current_word    1
+=       1
+word    1
+#       1
+Output  1
+the     1
+last    1
+word    1
+if      1
+needed! 1
+if      1
+current_word    1
+==      1
+word:   1
+print   1
+"%s\t%s"        1
+%       1
+(current_word,  1
+current_count)  1
+[ec2-user@ip-172-31-13-101 sanket]$ chmod 777 mapper.py reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -put data.txt /tmp/USUK30/sanket/data/
+put: `/tmp/USUK30/sanket/data/': No such file or directory: `hdfs://ip-172-31-3-80.eu-west-2.compute.internal:8020/tmp/USUK30/sanket/data'
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+data  data.txt  mapper.py  reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ rm -r data
+[ec2-user@ip-172-31-13-101 sanket]$ ls
+data.txt  mapper.py  reducer.py
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -mkdir /tmp/USUK30/sanket/data
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -put data.txt /tmp/USUK30/sanket/data/
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -ls /tmp/USUK30/sanket/data
+Found 1 items
+-rw-r--r--   3 ec2-user hadoop       1004 2024-02-13 17:02 /tmp/USUK30/sanket/data/data.txt
+[ec2-user@ip-172-31-13-101 sanket]$ hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar  -files mapper.py,reducer.py  -mapper "/usr/bin/python mapper.py"  -reducer "/usr/bin/python reducer.py"  -input /tmp/USUK30/sanket/data/data.txt  -output /tmp/USUK30/sanket/output
+WARNING: Use "yarn jar" to launch YARN applications.
+packageJobJar: [] [/opt/cloudera/parcels/CDH-7.1.7-1.cdh7.1.7.p0.15945976/jars/hadoop-streaming-3.1.1.7.1.7.0-551.jar] /tmp/streamjob2212563294966295059.jar tmpDir=null
+24/02/13 17:03:13 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-3-80.eu-west-2.compute.internal/172.31.3.80:8032
+24/02/13 17:03:13 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-3-80.eu-west-2.compute.internal/172.31.3.80:8032
+24/02/13 17:03:13 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /user/ec2-user/.staging/job_1706265926750_0059
+24/02/13 17:03:13 INFO mapred.FileInputFormat: Total input files to process : 1
+24/02/13 17:03:13 INFO mapreduce.JobSubmitter: number of splits:2
+24/02/13 17:03:14 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1706265926750_0059
+24/02/13 17:03:14 INFO mapreduce.JobSubmitter: Executing with tokens: []
+24/02/13 17:03:14 INFO conf.Configuration: resource-types.xml not found
+24/02/13 17:03:14 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+24/02/13 17:03:14 INFO impl.YarnClientImpl: Submitted application application_1706265926750_0059
+24/02/13 17:03:14 INFO mapreduce.Job: The url to track the job: http://ip-172-31-3-80.eu-west-2.compute.internal:8088/proxy/application_1706265926750_0059/
+24/02/13 17:03:14 INFO mapreduce.Job: Running job: job_1706265926750_0059
+24/02/13 17:03:20 INFO mapreduce.Job: Job job_1706265926750_0059 running in uber mode : false
+24/02/13 17:03:20 INFO mapreduce.Job:  map 0% reduce 0%
+24/02/13 17:03:25 INFO mapreduce.Job:  map 100% reduce 0%
+24/02/13 17:03:30 INFO mapreduce.Job:  map 100% reduce 20%
+24/02/13 17:03:33 INFO mapreduce.Job:  map 100% reduce 30%
+24/02/13 17:03:34 INFO mapreduce.Job:  map 100% reduce 40%
+24/02/13 17:03:36 INFO mapreduce.Job:  map 100% reduce 50%
+24/02/13 17:03:38 INFO mapreduce.Job:  map 100% reduce 60%
+24/02/13 17:03:40 INFO mapreduce.Job:  map 100% reduce 70%
+24/02/13 17:03:42 INFO mapreduce.Job:  map 100% reduce 80%
+24/02/13 17:03:43 INFO mapreduce.Job:  map 100% reduce 90%
+24/02/13 17:03:48 INFO mapreduce.Job:  map 100% reduce 100%
+24/02/13 17:03:48 INFO mapreduce.Job: Job job_1706265926750_0059 completed successfully
+24/02/13 17:03:48 INFO mapreduce.Job: Counters: 54
+        File System Counters
+                FILE: Number of bytes read=1144
+                FILE: Number of bytes written=3018296
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=1780
+                HDFS: Number of bytes written=757
+                HDFS: Number of read operations=56
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=20
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+                Launched map tasks=2
+                Launched reduce tasks=10
+                Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=5477
+                Total time spent by all reduces in occupied slots (ms)=45398
+                Total time spent by all map tasks (ms)=5477
+                Total time spent by all reduce tasks (ms)=45398
+                Total vcore-milliseconds taken by all map tasks=21908
+                Total vcore-milliseconds taken by all reduce tasks=181592
+                Total megabyte-milliseconds taken by all map tasks=44867584
+                Total megabyte-milliseconds taken by all reduce tasks=371900416
+        Map-Reduce Framework
+                Map input records=36
+                Map output records=141
+                Map output bytes=1152
+                Map output materialized bytes=1418
+                Input split bytes=274
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=86
+                Reduce shuffle bytes=1418
+                Reduce input records=141
+                Reduce output records=86
+                Spilled Records=282
+                Shuffled Maps =20
+                Failed Shuffles=0
+                Merged Map outputs=20
+                GC time elapsed (ms)=1430
+                CPU time spent (ms)=13520
+                Physical memory (bytes) snapshot=3742937088
+                Virtual memory (bytes) snapshot=79507165184
+                Total committed heap usage (bytes)=4127195136
+                Peak Map Physical memory (bytes)=557879296
+                Peak Map Virtual memory (bytes)=6626861056
+                Peak Reduce Physical memory (bytes)=290877440
+                Peak Reduce Virtual memory (bytes)=6638211072
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=1506
+        File Output Format Counters
+                Bytes Written=757
+24/02/13 17:03:48 INFO streaming.StreamJob: Output directory: /tmp/USUK30/sanket/output
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -ls /tmp/USUK30/sanket/output
+Found 11 items
+-rw-r--r--   3 ec2-user hadoop          0 2024-02-13 17:03 /tmp/USUK30/sanket/output/_SUCCESS
+-rw-r--r--   3 ec2-user hadoop         70 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00000
+-rw-r--r--   3 ec2-user hadoop         51 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00001
+-rw-r--r--   3 ec2-user hadoop        116 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00002
+-rw-r--r--   3 ec2-user hadoop         59 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00003
+-rw-r--r--   3 ec2-user hadoop         49 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00004
+-rw-r--r--   3 ec2-user hadoop         51 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00005
+-rw-r--r--   3 ec2-user hadoop         51 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00006
+-rw-r--r--   3 ec2-user hadoop         51 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00007
+-rw-r--r--   3 ec2-user hadoop        130 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00008
+-rw-r--r--   3 ec2-user hadoop        129 2024-02-13 17:03 /tmp/USUK30/sanket/output/part-00009
+[ec2-user@ip-172-31-13-101 sanket]$ hdfs dfs -cat /tmp/USUK30/sanket/output/part-00000
+Output  1
+before  1
+by      2
+count,  1

@@ -1,0 +1,35 @@
+Functional Programming in Python:
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. While Python is not purely functional, it supports many functional programming concepts:
+
+Pure Functions: Functions that always return the same output for the same input and have no side effects (i.e., they don't modify external state).
+
+First-Class Functions: Functions in Python are first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, and returned from other functions.
+
+Lambda Functions: Lambda functions (anonymous functions) allow you to create small, inline functions without needing to define a separate named function.
+
+Higher-Order Functions: Functions that take other functions as arguments or return functions as results. Examples include map(), filter(), and reduce().
+
+Immutable Data Structures: While Python's built-in data structures like tuples and frozensets are immutable, you can also use libraries like Immutable.js to work with immutable data structures.
+
+Recursion: Functional programming encourages the use of recursion to solve problems by breaking them down into smaller, self-similar subproblems.
+
+List Comprehensions and Generators: Python provides concise syntax for creating lists and generators using comprehensions and generator expressions, which align with functional programming principles.
+
+Decorators: Decorators allow you to modify or extend the behavior of functions or methods without modifying their underlying code, which can be useful for implementing aspects of functional programming such as memoization or logging.
+
+Unit Testing in Python:
+Unit testing is a software testing method where individual units or components of a software application are tested in isolation to ensure they perform as expected. Python has a built-in unit testing framework called unittest, as well as many third-party libraries such as pytest and nose.
+
+Here's an overview of unit testing in Python using the unittest framework:
+
+Test Cases: Tests are organized into classes called test cases, which inherit from the unittest.TestCase class.
+
+Test Methods: Test methods within test cases are identified by their names, which start with test_.
+
+Assertions: Test methods use assertion methods like assertEqual(), assertTrue(), assertFalse(), etc., to verify that the behavior of the code under test matches the expected behavior.
+
+Test Fixtures: unittest supports setup and teardown fixtures that run before and after each test method, allowing you to set up preconditions and clean up resources.
+
+Test Discovery: unittest can automatically discover and run tests by searching for test methods in Python modules and packages.
+
+Here's an example of a simple unit test using unittest:
